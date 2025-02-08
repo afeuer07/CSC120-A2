@@ -1,10 +1,24 @@
 class ResaleShop:
+    def __init__(self):
+        self.inventory = []
 
-    # What attributes will it need?
+    def buy_comp(self, item: "Computer"):  # Use "Computer" as a string to prevent circular import
+        print(f"Buying {item.title}...")
+        self.inventory.append(item)
+        print("Successfully added to inventory.")
 
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
-    def __init__():
-        pass # You'll remove this when you fill out your constructor
+    def sell_comp(self, item: "Computer"):
+        print(f"Selling {item.title}...")
+        if item in self.inventory:
+            self.inventory.remove(item)
+            print("Successfully removed from inventory.")
+        else:
+            print("Item not found in inventory.")
 
-    # What methods will you need?
+    def display_inventory(self):
+        print("Checking inventory...")
+        if not self.inventory:
+            print("Inventory is empty.")
+        else:
+            for comp in self.inventory:
+                comp.display_computer()
