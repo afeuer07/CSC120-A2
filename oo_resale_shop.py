@@ -6,7 +6,7 @@ class ResaleShop:
 
     # buy a computer, add it to inventory
     def buy_comp(self, item: "Computer"):  
-        print(f"Buying {item.title}...")
+        print(f"Buying {item.title}...") #ChatGPT helped format
         self.inventory.append(item)
         print("Successfully added to inventory.")
 
