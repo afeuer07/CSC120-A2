@@ -4,7 +4,7 @@ from oo_resale_shop import ResaleShop
 class Computer:
     # construct a computer object with the necessary attributes
     def __init__(self, name: str, year: int, processor: str, HD: int, mem: int, OS: str, amt: int):
-        self.title = f"{name} ({year})"
+        self.title = f"{name} ({year})"  #ChatGPT helped with formatting syntax (used f"{} several times after this)
         self.description = name
         self.year_made = year
         self.processor_type = processor
@@ -25,7 +25,7 @@ class Computer:
         self.price = new_price
         print("Done.")
 
-    # display the computer's attributes
+    # display the computer's attributes, Chat GPT helped with formatting syntax
     def display_computer(self):
         print(f"""
         Description: {self.description}
