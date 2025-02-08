@@ -1,12 +1,16 @@
 class ResaleShop:
+
+    # construct shop object
     def __init__(self):
         self.inventory = []
 
-    def buy_comp(self, item: "Computer"):  # Use "Computer" as a string to prevent circular import
+    # buy a computer, add it to inventory
+    def buy_comp(self, item: "Computer"):  
         print(f"Buying {item.title}...")
         self.inventory.append(item)
         print("Successfully added to inventory.")
 
+    # sell a computer, check if you have it, if so remove from inventory
     def sell_comp(self, item: "Computer"):
         print(f"Selling {item.title}...")
         if item in self.inventory:
@@ -15,6 +19,7 @@ class ResaleShop:
         else:
             print("Item not found in inventory.")
 
+    # display inventory unless it is empty
     def display_inventory(self):
         print("Checking inventory...")
         if not self.inventory:
